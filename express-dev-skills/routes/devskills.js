@@ -6,8 +6,26 @@ const devskillsCtrl = require('../controllers/devskills')
 
 router.get('/', devskillsCtrl.index)
 
-// Get /todos/:id
+//Get /devskills/new - 1. identifythe route > 2. create the ui in index.ejs
+
+router.get('/new', devskillsCtrl.newdevskill)
+
+// Get /devskills/:id
 
 router.get('/:id', devskillsCtrl.show)
+
+// post /devskills
+
+router.post('/', devskillsCtrl.create)
+
+// DELETE /devskills/:id
+
+router.delete('/:id', devskillsCtrl.deletedevskill)
+
+// GET /devskill/:id/edit
+
+router.get('/:id/edit', devskillsCtrl.editdevskill)
+
+router.put('/:id', devskillsCtrl.updateskills)
 
 module.exports = router

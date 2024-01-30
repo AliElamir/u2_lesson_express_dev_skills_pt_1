@@ -7,9 +7,17 @@
 </head>
   <body>
     <h1>Developer skills learned</h1>
+    <h3>Developer skills learned as of <%=time%></h3>
+    <a href="devskills/new">Add skill</a>
     <ul>
       <% devskills.forEach ( devskill=>{ %>
-        <a href="/devskills/<%= devskill.id %>"><%= devskill.devskill %></a>
+        <li>
+          <a href="/devskills/<%= devskill.id %>/edit">Edit skill</a>
+          <form action="/devskills/<%=devskill.id%>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+          </form>
+          <a href="/devskills/<%= devskill.id %>"><%= devskill.devskill %></a>
+        </li>
       <%})%>
     </ul>
   </body>
