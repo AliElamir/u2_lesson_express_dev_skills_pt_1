@@ -17,7 +17,7 @@ const getOne = (id) => {
 }
 
 const create = (adevskill) => {
-  // {devskill: "user input", id: "devskills.id" , done:"devskills.done"}
+  // {devskill: "user input", id: "devskills.id" , done:"devskills.done"} and
   adevskill.id = Date.now() % 1000000
   adevskill.done = false
   devskills.push(adevskill)
