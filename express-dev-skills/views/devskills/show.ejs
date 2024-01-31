@@ -8,5 +8,9 @@
 <body>
   <h3><%= devskill.devskill %></h3>
   <h3>Complete: <%= devskill.done ? 'Yes' : 'No' %></h3>
+  <a href="/devskills/<%= devskill.id %>/edit">Edit skill</a>
+  <form action="/devskills/<%=devskill.id%>?_method=DELETE" method="POST">
+    <button type="submit">X</button>
+  </form>
 </body>
 </html>

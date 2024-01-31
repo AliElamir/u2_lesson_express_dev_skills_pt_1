@@ -22,9 +22,11 @@ router.post('/', devskillsCtrl.create)
 
 router.delete('/:id', devskillsCtrl.deletedevskill)
 
-// GET /devskill/:id/edit
+// GET /devskills/:id/edit
 
 router.get('/:id/edit', devskillsCtrl.editdevskill)
+
+// PUT /devskills/:id
 
 router.put('/:id', devskillsCtrl.updateskills)
 

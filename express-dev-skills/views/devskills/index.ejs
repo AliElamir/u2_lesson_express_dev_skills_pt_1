@@ -12,10 +12,6 @@
     <ul>
       <% devskills.forEach ( devskill=>{ %>
         <li>
-          <a href="/devskills/<%= devskill.id %>/edit">Edit skill</a>
-          <form action="/devskills/<%=devskill.id%>?_method=DELETE" method="POST">
-            <button type="submit">X</button>
-          </form>
           <a href="/devskills/<%= devskill.id %>"><%= devskill.devskill %></a>
         </li>
       <%})%>

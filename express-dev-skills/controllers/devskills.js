@@ -37,10 +37,14 @@ const editdevskill = (req, res) => {
 }
 
 const updateskills = (req, res) => {
+  const devskill = Devskill.getOne(req.params.id)
   let devskillId = req.params.id
   let updateDevskill = req.body.devskill
   Devskill.updateOne(devskillId, updateDevskill)
-  res.redirect('/devskills')
+  // res.redirect('/devskills')
+  res.render('devskills/show', {
+    devskill
+  })
 }
 
 module.exports = {
